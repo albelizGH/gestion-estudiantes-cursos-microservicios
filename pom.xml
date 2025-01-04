@@ -30,6 +30,9 @@
         <module>
             microservices.config
         </module>
+        <module>
+            microservices.student
+        </module>
     </modules>
 
     <properties>
