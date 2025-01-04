@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <!--		Le pegue las propiedades groupId,artifactId,version del pom.xml padre para que sea tomado como hijo-->
+        <!--	Le pegue las propiedades groupId,artifactId,version del pom.xml padre para que sea tomado como hijo-->
         <groupId>com.projects.alejobeliz</groupId>
         <artifactId>SpringBootMicroservices</artifactId>
         <version>1.0-SNAPSHOT</version>
@@ -41,13 +41,12 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway-mvc</artifactId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

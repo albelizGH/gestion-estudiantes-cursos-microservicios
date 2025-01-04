@@ -6,10 +6,12 @@ import com.microservice.course.entity.Course;
 import com.microservice.course.http.response.StudentByCourseResponse;
 import com.microservice.course.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class CourseServiceImpl implements ICourseService{
+@Service
+public class CourseServiceImpl implements ICourseService {
 
     private final CourseRepository courseRepository;
 

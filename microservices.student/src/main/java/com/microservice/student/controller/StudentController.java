@@ -43,8 +43,8 @@ public class StudentController {
 
 //!    La idea es que nuestro microservicio de curso pueda solicitar esta informacion
     @GetMapping("/course/{id}")
-    public ResponseEntity<?> findByIdCourse(@PathVariable Long courseId){
-        return ResponseEntity.ok(studentService.findByCourseId(courseId));
+    public ResponseEntity<?> findByIdCourse(@PathVariable Long id){
+        return ResponseEntity.ok(studentService.findByCourseId(id));
     }
 
 

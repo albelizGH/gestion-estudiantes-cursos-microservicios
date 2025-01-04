@@ -9,4 +9,5 @@ public record StudentDto(
         String name,
         String lastName,
         String email,
-        Long courseId) {}
+        Long courseId) {
+}

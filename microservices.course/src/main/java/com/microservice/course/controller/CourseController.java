@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/course")
+@RequestMapping("/api/course")
 public class CourseController {
 
-    private CourseServiceImpl courseService;
+    private final CourseServiceImpl courseService;
 
     @Autowired
     public CourseController(CourseServiceImpl courseService) {
