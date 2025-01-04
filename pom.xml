@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.projects.alejobeliz</groupId>
+    <artifactId>SpringBootMicroservices</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>SpringBootMicroservices</name>
+    <!--    Para decirle a maven que esto es un contenedor de proyecto, va a contener otros modulos dentros-->
+    <packaging>pom</packaging>
+
+    <url>http://maven.apache.org</url>
+
+    <modules>
+        <!--Vamos agregando los modulos hijos que vamos a usar en el proyecto aca-->
+        <module>
+            microservices.gateway
+        </module>
+        <module>
+            microservices.eureka
+        </module>
+        <module>
+            microservices.config
+        </module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <!--    Las dependencias que van a tener en comun mis microservicios-->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>3.4.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
+
