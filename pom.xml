@@ -33,6 +33,9 @@
         <module>
             microservices.student
         </module>
+        <module>
+            microservices.course
+        </module>
     </modules>
 
     <properties>
