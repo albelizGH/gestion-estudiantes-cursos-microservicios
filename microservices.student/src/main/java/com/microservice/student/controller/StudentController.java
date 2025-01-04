@@ -20,13 +20,12 @@ public class StudentController {
     }
 
     @PostMapping
-    public ResponseEntity saveStudent(@RequestBody Student student){
+    public ResponseEntity<?> saveStudent(@RequestBody Student student){
         studentService.save(student);
         return ResponseEntity.status(201).build();
     }
 
     @GetMapping
-    public ResponseEntity<List<Student>> findAllStudent(){
     public ResponseEntity<List<Student>> findAllStudent(){
         return ResponseEntity.ok(studentService.findAll());
     }
@@ -37,9 +36,15 @@ public class StudentController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteStudent(@PathVariable Long id){
+    public ResponseEntity<?> deleteStudent(@PathVariable Long id){
         studentService.deleteById(id);
         return ResponseEntity.noContent().build();
+    }
+
+//!    La idea es que nuestro microservicio de curso pueda solicitar esta informacion
+    @GetMapping("/course/{id}")
+    public ResponseEntity<?> findByIdCourse(@PathVariable Long courseId){
+        return ResponseEntity.ok(studentService.findByCourseId(courseId));
     }
 
 
