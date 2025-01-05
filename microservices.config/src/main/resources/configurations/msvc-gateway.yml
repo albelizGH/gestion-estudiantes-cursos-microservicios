@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: msvc-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: students
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/student/**
+        - id: courses
+          uri: http://localhost:9090
+          predicates:
+            - Path=/api/course/**
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#    register-with-eureka: false # Gateway no se registra en Eureka Server ya que no es necesario
+#    fetch-registry: true
+
+eureka:
+  client:
+    register-with-eureka: false

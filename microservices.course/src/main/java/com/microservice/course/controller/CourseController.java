@@ -41,9 +41,9 @@ public class CourseController {
         return ResponseEntity.noContent().build();
     }
 
+//    ! Este controller es para que el microservicio de curso pueda solicitar la informacion de los estudiantes
     @GetMapping("/{id}/students")
     public ResponseEntity<?> findStudentsByCourse(@PathVariable Long id){
         return ResponseEntity.ok(courseService.findStudentsByCourse(id));
     }
-
 }
